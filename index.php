@@ -14,6 +14,8 @@ function get_data($url) {
 $page = get_data( "https://en.wikipedia.org/w/api.php?action=query&list=recentchanges&rcprop=title&rclimit=1&rcnamespace=6&format=json" );
 $api_data = json_decode( $page );
 
+var_dump( $api_data );
+
 ?>
 <!doctype html>
 <html>
@@ -31,7 +33,7 @@ $api_data = json_decode( $page );
 <body>
 	<h2>Hello World!</h2>
 	<h3>Here's the latest edited file from Wikipedia</h3>
-	<iframe src=<?php echo '"http://en.wikipedia.org/wiki/' . $api_data['query']['recentchanges']['title'] . '"' ?>
+	<iframe src=<?php echo '"http://en.wikipedia.org/wiki/' . $api_data['query']['recentchanges']['title'] . '"' ?> >
 	</iframe>
 </body>
 </html>
