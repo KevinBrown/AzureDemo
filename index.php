@@ -14,7 +14,7 @@ function get_data($url) {
 $page = get_data( "https://en.wikipedia.org/w/api.php?action=query&list=recentchanges&rcprop=title&rclimit=1&rcnamespace=6&format=json" );
 $api_data = json_decode( $page );
 
-var_dump( $api_data );
+var_dump( $page );
 
 ?>
 <!doctype html>
