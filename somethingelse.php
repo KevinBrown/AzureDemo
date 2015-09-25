@@ -1,6 +1,7 @@
  <?php
 
 function get_data($url) {
+	return file_get_contents($url);
 	$ch = curl_init();
 	$timeout = 5;
 	curl_setopt($ch, CURLOPT_URL, $url);
